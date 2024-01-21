@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoiseWarden</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700;900&family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.3.0/simplex-noise.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+        <!-- <div id="para">
+            <div id="scene">
+                <div class="layer" data-depth="0.30" style="object-fit: cover;"><img src="Pictures/2.png"></div>
+                <div class="layer" data-depth="0.20" style="width: 100%; position: relative; left: 300px;"><img src="Pictures/1.png">
+                </div>
+                
+            </div>
+        </div> -->
+        <div class="sinwaveContainer">
+            <h1>NoiseWarden</h1>
+            <a href="signup.html"><button type="submit" class="btn">Login</button></a>
+            <div id="sinwave" class="sinwave">
+            </div>
+            <h3>Welcome to NoiseWarden – where your sound finds its safe haven! 🌟 
+              Unleash the power of sound on our platform by effortlessly uploading your 
+              audio files. What's our superpower? We not only measure sound levels with 
+              precision but also play the role of your audio guardian, checking if it 
+              comfortably stays under the noise radar. </h3>
+
+        </div>
+        <div class = "fileContainer">
+            <label for="audio" id="label"><p>Select file</p></label><input type="file" id="audio" accept=".mp3" />
+        </div>
+        <div class="text">
+        <p>Green = Safe Levels</p>
+        <p>Red = Unsafe Levels</p></div>
+        <div>
+            <div id="visualiser">
+              
+            </div>
+        
+        </div>
+        <div class="mapdiv">
+            <div id="map" class="map">
+
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="./js/p5.js"></script>
+    <script type="text/javascript"></script>
+    <script src="./js/parallax.js"></script>
+    <script src="./app.js"></script>
+    <script type="text/javascript">
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    </script>
+  </body>
+</html>
